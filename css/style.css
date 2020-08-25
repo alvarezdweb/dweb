@@ -286,9 +286,7 @@ body {
     font-size: 2em;
     padding-bottom: .5em; }
   .hero__content .hero__button {
-    font-size: 1.3em; }
-  .icon {
-    visibility: hidden; } }
+    font-size: 1.3em; } }
 
 @media (min-width: 1024px) {
   .icon {
