@@ -2,9 +2,12 @@
 <html lang="en">
 
 <head>
-    
-    <meta name="keywords" content="Desarrollo, Diseño, Web, E-commerce, Tienda, Landing, HTML, CSS, JavaScript, Diseño web, Desarrollo web">
-    <meta name="description" content="en DWEB somos apasionados por el desarrollo y queremos ponernos a tu entera disposicion para poder llevar tu negocio a un proximo nivel">
+
+    <meta name="keywords"
+        content="Desarrollo, Diseño, Web, E-commerce, Tienda, Landing, HTML, CSS, JavaScript, Diseño web, Desarrollo web">
+
+    <meta name="description"
+        content="Somos una empresa joven de desarrollo web con experiencia, compromiso y estamos en constante actualizacion para poder brindarte la mejor solucion a tu negocio">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -22,65 +25,82 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Dweb | Una empresa joven con experiencia</title>
+    <title>Dweb | Desarrollo Web Profecional</title>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <a class="navbar-brand" href="#"><img src="img/logo.svg" alt=""></a>
-        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#hero">Inicio<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="index.html#about" id="navbarDropdownMenuLink"
-                        role="button" aria-haspopup="true" aria-expanded="false">
-                        Nosotros
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Conocenos</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="index.html#services" id="navbarDropdownMenuLink"
-                        role="button" aria-haspopup="true" aria-expanded="false">
-                        Servicios
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="landing.html">Landing Page</a>
-                        <a class="dropdown-item" href="web.html">Web C/Secciones</a>
-                        <a class="dropdown-item" href="tienda.html">Tienda Online</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#contact">Contacto</a>
-                </li>
+    <!-- start nav -->
 
-            </ul>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="icon col">
+                <button onclick="openNav(estado)" class="menu-btn" id="menuButton">
+                    <span class="burger-icon"></span>
+                </button>
+            </div>
         </div>
-    </nav>
+        <div id="menu" class="menu row">
+            <div class="menu__content col">
+                <a class="menu__item menu__item--logo" href="index.html"> <img src="img/logo.svg" alt=""></a>
+                <a class="menu__item menu__item--link" href="index.html">Inicio</a>
+                <a class="menu__item menu__item--link menu__item--active" href="#">Nosotros</a>
+                <a class="menu__item menu__item--link" href="servicios.html">Servicios</a>
+                <a class="menu__item menu__item--link" href="portfolio.html">Portfolio</a>
+                <a class="menu__item menu__item--link" href="contacto.html">Contacto</a>
+                <p class="menu__item menu__item--p">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit illo illum quibusdam odit dicta officia, nemo excepturi</p>
+                <div class="menu__item menu__item--icon">
+                    <i class=" fab fa-facebook-f"></i>
+                    <i class=" fab fa-instagram"></i>
+                    <i class=" fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end nav -->
 
 
-    <div class="prov container-fluid"></div>
+    <!-- start more -->
 
+    <div class="more container-fluid" id="hero">
+        <div class="row">
+            <div class="col">
+                <h1>Somos una empresa joven con experiencia...</h1>
+            </div>
+        </div>
+        <div class="more__content row">
+            <div class="more__img col-12 col-lg-6">
+                <img src="img/more.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-12 col-lg-6">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quisquam perspiciatis ducimus magni,
+                    consequuntur explicabo amet nam, reiciendis nobis doloremque saepe nesciunt eum voluptates harum
+                    ipsum iure expedita distinctio tenetur!</p>
+                <div class="more__skils">
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                    <i class="fab fa-js"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end more -->
+
+
+    <!-- start footer -->
 
     <div class="footer container-fluid">
-        <div class="row d-flex justify-content-around align-items-center">
-            <div class="col text-center">
+        <div class="row">
+            <div class="col">
                 <p>© Copyright dweb 2020</p>
             </div>
         </div>
     </div>
+
+    <!-- end footer -->
 
 
 
@@ -108,6 +128,85 @@
 
 
     <!-- Optional JavaScript -->
+
+    <script>
+        //Function button menu SCROLL
+
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById("menuButton").style.background = "#FFFFFF";
+                document.getElementById("menuButton").style.transition = "all 2s";
+
+
+            } else {
+                document.getElementById("menuButton").style.background = "transparent";
+                document.getElementById("menuButton").style.transition = "all 2s";
+
+
+            }
+        }
+
+
+        //query para corregir error en menu
+
+        function myFunction(x) {
+            if (x.matches) {
+                document.getElementById("menu").style.transform = "translateX(0)";
+                document.getElementById("menuButton").style.display = "none";
+                document.getElementById("menu").style.transition = "transform 0s";
+
+            } else {
+                document.getElementById("menu").style.transform = "translateX(-250px)";
+                document.getElementById("menuButton").style.display = "inline-block";
+                document.getElementById("menu").style.transition = "transform 0s";
+
+
+            }
+        }
+
+        var x = window.matchMedia("(min-width: 1024px)")
+        myFunction(x)
+        x.addListener(myFunction)
+
+
+        // Animacion burger button
+
+        var menuButton = document.getElementById('menuButton');
+        menuButton.addEventListener('click', function (e) {
+            menuButton.classList.toggle('is-active');
+            e.preventDefault();
+        });
+
+
+        //Function open&close menu
+
+        window.estado = 0;
+
+        function openNav(estado) {
+            if (estado == 0) {
+                document.getElementById("menu").style.transform = "translateX(0)";
+                document.getElementById("menu").style.boxShadow = "0px 0px 30px rgba(127, 137, 161, 0.5)";
+                document.getElementById("menu").style.transition = "all 1s";
+
+                window.estado++;
+            } else if (estado == 1) {
+                document.getElementById("menu").style.transform = "translateX(-250px)";
+                document.getElementById("menu").style.boxShadow = "none";
+                document.getElementById("menu").style.transition = "all 1s";
+                window.estado--;
+            }
+        }
+    </script>
+
+
+
+
+
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
