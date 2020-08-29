@@ -149,10 +149,12 @@ body {
       padding: .6em 2em;
       color: #FFFFFF;
       background-color: #FF009A;
+      border-radius: .4em;
       font-weight: 500;
-      transition: .2s ease-in-out; }
+      transition: .2s ease-in-out;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6); }
       .hero__content .hero__button:hover {
-        background-color: #ff0099c0; }
+        box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.6); }
 
 .about, .portfolio, .contact {
   padding-top: 3em; }
