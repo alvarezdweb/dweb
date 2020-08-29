@@ -98,7 +98,7 @@ body {
     flex-direction: column;
     justify-content: flex-start; }
     .menu__content .menu__item {
-      color: #0a0a0a;
+      color: #303030;
       padding: .3em 0;
       text-decoration: none; }
       .menu__content .menu__item--link {
@@ -129,7 +129,8 @@ body {
 .hero {
   height: 100vh;
   padding-top: 3.75em;
-  background-color: #F5F5F5; }
+  background: url(/img/hero.jpg) no-repeat center;
+  background-size: cover; }
   .hero .row {
     height: 100%;
     width: 90%;
@@ -137,22 +138,22 @@ body {
   .hero__content {
     margin: auto 0; }
     .hero__content h1 {
+      color: #303030;
       font-weight: 700; }
     .hero__content p {
       font-size: 1.3em;
-      padding-bottom: 1.5em; }
+      padding-bottom: 1.3em;
+      color: #303030; }
     .hero__content .hero__button {
-      font-size: 1.2em;
+      font-size: 1em;
       text-decoration: none;
-      padding: .5em;
-      border: 2px solid;
-      color: #FF009A;
+      padding: .6em 2em;
+      color: #FFFFFF;
+      background-color: #FF009A;
       font-weight: 500;
       transition: .2s ease-in-out; }
       .hero__content .hero__button:hover {
-        background-color: #FF009A;
-        border: 2px solid #FF009A;
-        color: #FFFFFF; }
+        background-color: #ff0099c0; }
 
 .about, .portfolio, .contact {
   padding-top: 3em; }
@@ -162,7 +163,7 @@ body {
     font-size: 1.5em;
     padding-bottom: 1em; }
   .about h4, .portfolio h4, .contact h4 {
-    color: #0a0a0a;
+    color: #303030;
     font-weight: 500;
     font-size: 2em;
     padding-bottom: 1em; }
@@ -264,7 +265,7 @@ body {
     background-color: #FFFFFF;
     margin: auto; }
     .services--section .row .services__item {
-      color: #0a0a0a; }
+      color: #303030; }
 
 .portfolio--section {
   padding: 10em 1em; }
