@@ -128,8 +128,7 @@ body {
 
 .hero {
   height: 100vh;
-  padding-top: 3.75em;
-  background: url(/img/hero.jpg) no-repeat center;
+  background: url(../img/hero.jpg) no-repeat center;
   background-size: cover; }
   .hero .row {
     height: 100%;
