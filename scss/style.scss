@@ -199,7 +199,7 @@ body {
         }
 
         .hero__button {
-
+            text-decoration: none;
             display: inline-block;
             -webkit-font-smoothing: antialiased;
             position: relative;
@@ -608,6 +608,10 @@ body {
     }
 
 }
+
+// -------------------------------------------------- END MEDIA
+
+
 
 
 // -------------------------------------------------- START KEYFRAMES

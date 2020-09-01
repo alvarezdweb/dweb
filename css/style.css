@@ -144,6 +144,7 @@ body {
       padding-bottom: 1.3em;
       color: #303030; }
     .hero__content .hero__button {
+      text-decoration: none;
       display: inline-block;
       -webkit-font-smoothing: antialiased;
       position: relative;
