@@ -100,7 +100,8 @@ body {
     .menu__content .menu__item {
       color: #303030;
       padding: .3em 0;
-      text-decoration: none; }
+      text-decoration: none;
+      transition: color .3s ease-in-out; }
       .menu__content .menu__item--link {
         font-weight: 500;
         padding-left: 1em; }
@@ -116,15 +117,21 @@ body {
         .menu__content .menu__item--logo img {
           width: 100px; }
       .menu__content .menu__item--p {
-        padding-top: 7em;
+        padding-top: 10em;
         font-size: .8em;
         line-height: 1.8em;
         padding-left: 1em; }
       .menu__content .menu__item--icon {
         margin: auto; }
-        .menu__content .menu__item--icon i {
-          font-size: 1.5em;
-          padding: 0 .5em; }
+        .menu__content .menu__item--icon a {
+          text-decoration: none;
+          color: #303030;
+          transition: color .3s ease-in-out; }
+          .menu__content .menu__item--icon a i {
+            font-size: 1.5em;
+            padding: 0 .5em; }
+          .menu__content .menu__item--icon a:hover {
+            color: #FF009A; }
 
 .hero {
   height: 100vh;
@@ -132,7 +139,7 @@ body {
   background-size: cover; }
   .hero .row {
     height: 100%;
-    width: 90%;
+    max-width: 720px;
     margin: auto; }
   .hero__content {
     margin: auto 0; }
@@ -180,7 +187,8 @@ body {
         animation: bounceright .3s alternate ease infinite; }
 
 .about, .portfolio, .contact {
-  padding-top: 3em; }
+  padding-top: 6em;
+  max-width: 768px; }
   .about h3, .portfolio h3, .contact h3 {
     color: #FF009A;
     font-weight: 700;
@@ -195,13 +203,11 @@ body {
     margin: auto; }
     .about__content p {
       margin: auto;
-      line-height: 1.8em;
-      padding: .8em; }
-    .about__content img {
-      border-radius: 1em; }
+      line-height: 2em;
+      padding-bottom: 2em; }
 
 .services {
-  padding-top: 3em; }
+  padding-top: 6em; }
   .services .row {
     background-color: #FF009A;
     padding: 6em 0; }
@@ -230,15 +236,61 @@ body {
     padding-bottom: 0; }
 
 .portfolio__galery {
-  padding: 0 1em; }
-  .portfolio__galery .col-12 {
+  padding: 0 1em;
+  position: relative; }
+  .portfolio__galery .portfolio__item {
     margin: 0;
     padding: 0; }
+    .portfolio__galery .portfolio__item img {
+      opacity: 1; }
+    .portfolio__galery .portfolio__item .portfolio__text {
+      opacity: 0;
+      background-color: #FF009A;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: opacity .5s ease-in-out; }
+      .portfolio__galery .portfolio__item .portfolio__text p {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #FFFFFF; }
+        .portfolio__galery .portfolio__item .portfolio__text p span {
+          font-weight: 700; }
+    .portfolio__galery .portfolio__item:hover .portfolio__text {
+      opacity: .9; }
 
 .contact__form {
   margin: auto; }
+  .contact__form input:focus {
+    outline: none; }
+  .contact__form label {
+    padding: .5em 0;
+    margin: 0;
+    font-weight: 500; }
   .contact__form textarea {
     resize: none; }
+    .contact__form textarea:focus {
+      outline: none; }
+  .contact__form .contact__button {
+    margin: .5em 0;
+    padding: .5em 0;
+    border: none;
+    background-color: #FF009A;
+    color: #FFFFFF;
+    font-weight: 500;
+    transition: all .5s ease-in-out; }
+    .contact__form .contact__button:hover {
+      background-color: #ff0099c9; }
+    .contact__form .contact__button:focus {
+      outline: none; }
   .contact__form form {
     display: flex;
     flex-direction: column; }
@@ -294,26 +346,20 @@ body {
 .portfolio--section {
   padding: 10em 1em; }
 
-@media (min-width: 576px) {
-  .services__item {
-    width: 80%; }
-  .contact__map {
-    padding: .5em; } }
-
 .contact--section {
   padding: 10em 1em; }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .hero__content h1 {
-    font-weight: 700;
     font-size: 3em; }
   .hero__content p {
-    font-size: 2em;
-    padding-bottom: .5em; }
-  .hero__content .hero__button {
-    font-size: 1.3em; } }
+    font-size: 1.8em; }
+  .about h3, .portfolio h3, .contact h3 {
+    font-size: 1.8em; }
+  .about h4, .portfolio h4, .contact h4 {
+    font-size: 2.5em; } }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .icon {
     visibility: hidden; }
   .menu {
@@ -340,26 +386,31 @@ body {
           display: none; }
         .menu__content .menu__item--icon {
           display: none; }
-  .about h3, .portfolio h3, .contact h3 {
-    font-size: 1.8em; }
-  .about h4, .portfolio h4, .contact h4 {
-    font-size: 2.8em; }
-  .about__content p {
-    font-size: 1.2em;
-    line-height: 2em; }
+  .hero {
+    padding-top: 3em; }
+  .about, .portfolio, .contact {
+    max-width: 992px; }
+    .about h3, .portfolio h3, .contact h3 {
+      font-size: 2em; }
+    .about h4, .portfolio h4, .contact h4 {
+      font-size: 3em; }
+    .about__content p {
+      padding: 2em 0;
+      font-size: 1.2em; }
   .services__item {
-    width: 80%;
     padding-bottom: 0; } }
 
-@media (min-width: 1140px) {
-  .about h3, .portfolio h3, .contact h3 {
-    font-size: 1.8em; }
-  .about h4, .portfolio h4, .contact h4 {
-    font-size: 2.8em; }
-  .about__content p {
-    padding: 2em;
-    font-size: 1.2em;
-    line-height: 2.5em; } }
+@media (min-width: 1200px) {
+  .hero .row {
+    max-width: 1000px; }
+  .hero__content h1 {
+    font-size: 3.2em; }
+  .hero__content p {
+    font-size: 2em; }
+  .about, .portfolio, .contact {
+    max-width: 1200px; }
+    .about__content p {
+      font-size: 1.4em; } }
 
 @keyframes bounceright {
   from {

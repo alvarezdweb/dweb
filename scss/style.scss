@@ -4,6 +4,7 @@
 // Variables
 $pink:#FF009A;
 $pinkh:#ff0099c9;
+$pinkt:#ff009923;
 $white: #FFFFFF;
 $white2: #F5F5F5;
 $black: #303030;
@@ -122,11 +123,11 @@ body {
         flex-direction: column;
         justify-content: flex-start;
 
-
         .menu__item {
             color: $black;
             padding: .3em 0;
             text-decoration: none;
+            transition: color .3s ease-in-out;
 
             &--link {
                 font-weight: 500;
@@ -154,7 +155,7 @@ body {
             }
 
             &--p {
-                padding-top: 7em;
+                padding-top: 10em;
                 font-size: .8em;
                 line-height: 1.8em;
                 padding-left: 1em;
@@ -164,9 +165,20 @@ body {
             &--icon {
                 margin: auto;
 
-                i {
-                    font-size: 1.5em;
-                    padding: 0 .5em;
+                a {
+                    text-decoration: none;
+                    color: $black;
+                    transition: color .3s ease-in-out;
+
+
+                    i {
+                        font-size: 1.5em;
+                        padding: 0 .5em;
+                    }
+
+                    &:hover {
+                        color: $pink;
+                    }
                 }
             }
         }
@@ -180,7 +192,7 @@ body {
 
     .row {
         height: 100%;
-        width: 90%;
+        max-width: 720px;
         margin: auto;
     }
 
@@ -252,7 +264,9 @@ body {
 }
 
 .about {
-    padding-top: 3em;
+    padding-top: 6em;
+    max-width: 768px;
+
 
     h3 {
         color: $pink;
@@ -273,19 +287,17 @@ body {
 
         p {
             margin: auto;
-            line-height: 1.8em;
-            padding: .8em;
+            line-height: 2em;
+            padding-bottom: 2em;
         }
 
-        img {
-            border-radius: 1em;
-        }
+        img {}
     }
 
 }
 
 .services {
-    padding-top: 3em;
+    padding-top: 6em;
 
     .row {
         background-color: $pink;
@@ -336,10 +348,50 @@ body {
 
     &__galery {
         padding: 0 1em;
+        position: relative;
 
-        .col-12 {
+        .portfolio__item {
+
             margin: 0;
             padding: 0;
+
+            img {
+                opacity: 1;
+            }
+
+            .portfolio__text {
+                opacity: 0;
+                background-color: $pink;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                transition: opacity .5s ease-in-out;
+
+
+                p {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    color: $white;
+
+                    span {
+                        font-weight: 700;
+                    }
+
+                }
+            }
+
+            &:hover .portfolio__text {
+                opacity: .9;
+            }
+
         }
     }
 }
@@ -350,8 +402,42 @@ body {
     &__form {
         margin: auto;
 
+        input {
+            &:focus {
+                outline: none;
+            }
+        }
+
+        label {
+            padding: .5em 0;
+            margin: 0;
+            font-weight: 500;
+        }
+
         textarea {
             resize: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .contact__button {
+            margin: .5em 0;
+            padding: .5em 0;
+            border: none;
+            background-color: $pink;
+            color: $white;
+            font-weight: 500;
+            transition: all .5s ease-in-out;
+
+            &:hover {
+                background-color: $pinkh;
+            }
+
+            &:focus {
+                outline: none;
+            }
         }
 
         form {
@@ -387,6 +473,7 @@ body {
 
 
 // -------------------------------------------------------------conocenos.html
+
 .more {
     padding-top: 5em;
 
@@ -433,6 +520,7 @@ body {
 }
 
 // ---------------------------------------------------------------------services.html
+
 .services--section {
     padding-top: 5em;
     margin: auto;
@@ -456,56 +544,49 @@ body {
     padding: 10em 1em;
 }
 
-@media (min-width: 576px) {
-
-    .services {
-        &__item {
-            width: 80%;
-        }
-    }
-
-    .contact {
-
-        &__map {
-            padding: .5em;
-        }
-    }
-}
-
 // ---------------------------------------------------------------------contacto.html
 
 .contact--section {
     padding: 10em 1em;
 }
 
+// -------------------------------------------------- start @media
+
 @media (min-width: 576px) {}
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
 
     .hero {
-
 
         &__content {
 
             h1 {
-                font-weight: 700;
                 font-size: 3em;
             }
 
             p {
-                font-size: 2em;
-                padding-bottom: .5em;
-            }
+                font-size: 1.8em;
 
-            .hero__button {
-                font-size: 1.3em;
             }
         }
+
     }
+
+    .about {
+
+        h3 {
+            font-size: 1.8em;
+        }
+
+        h4 {
+            font-size: 2.5em;
+        }
+    }
+
+
 }
 
-@media (min-width: 1024px) {
-
+@media (min-width: 992px) {
 
     .icon {
         visibility: hidden;
@@ -553,76 +634,91 @@ body {
         }
     }
 
-    .about {
 
-        h3 {
-            font-size: 1.8em;
-        }
 
-        h4 {
-            font-size: 2.8em;
-        }
+    .hero {
+        padding-top: 3em;
 
-        &__content {
-
-            p {
-                font-size: 1.2em;
-                line-height: 2em;
-            }
-
-        }
 
     }
 
+    .about {
+        max-width: 992px;
+
+        h3 {
+            font-size: 2em;
+        }
+
+        h4 {
+            font-size: 3em;
+        }
+
+        &__content {
+            p {
+                padding: 2em 0;
+                font-size: 1.2em;
+            }
+        }
+    }
+
     .services {
+
         &__item {
-            width: 80%;
             padding-bottom: 0;
         }
     }
 
+
 }
 
-@media (min-width: 1140px) {
+@media (min-width: 1200px) {
 
-    .about {
+    .hero {
 
-        h3 {
-            font-size: 1.8em;
-        }
-
-        h4 {
-            font-size: 2.8em;
+        .row {
+            max-width: 1000px;
         }
 
         &__content {
-
-            p {
-                padding: 2em;
-                font-size: 1.2em;
-                line-height: 2.5em;
+            h1 {
+                font-size: 3.2em;
             }
 
+            p {
+                font-size: 2em;
+
+            }
         }
 
     }
 
+    .about {
+        max-width: 1200px;
+
+        &__content {
+            p {
+                font-size: 1.4em;
+
+            }
+        }
+    }
+
 }
 
-// -------------------------------------------------- END MEDIA
+// -------------------------------------------------- end @media
 
 
 
-
-// -------------------------------------------------- START KEYFRAMES
+// -------------------------------------------------- start @keyframes
 
 @keyframes bounceright {
     from {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-    to {
-      transform: translateX(3px);
-    }
-  }
 
-// -------------------------------------------------- END KEYFRAMES
+    to {
+        transform: translateX(3px);
+    }
+}
+
+// -------------------------------------------------- end @keyframes

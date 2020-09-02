@@ -32,36 +32,34 @@
 
   <!-- start nav -->
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="icon col">
-      <button onclick="openNav(estado)" class="menu-btn" id="menuButton">
-        <span class="burger-icon"></span>
-      </button>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="icon col">
+        <button onclick="openNav(estado)" class="menu-btn" id="menuButton">
+          <span class="burger-icon"></span>
+        </button>
+      </div>
+    </div>
+    <div id="menu" class="menu row">
+      <div class="menu__content col">
+        <a class="menu__item menu__item--logo" href="#hero"> <img src="img/logo.svg" alt=""></a>
+        <a class="menu__item menu__item--link menu__item--active" href="#hero">Inicio</a>
+        <a class="menu__item menu__item--link" href="conocenos.html">Nosotros</a>
+        <a class="menu__item menu__item--link" href="servicios.html">Servicios</a>
+        <a class="menu__item menu__item--link" href="portfolio.html">Portfolio</a>
+        <a class="menu__item menu__item--link" href="contacto.html">Contacto</a>
+        <p class="menu__item menu__item--p">Para nosotros desarrollar no es solo entregar y cumplir con los tiempos, es
+          llevar tu idea a un siguiente nivel</p>
+        <div class="menu__item menu__item--icon">
+          <a href="#"> <i class=" fab fa-facebook-f"></i> </a>
+          <a href="#"> <i class=" fab fa-instagram"></i> </a>
+          <a href="#"> <i class=" fab fa-twitter"></i> </a>
+        </div>
+      </div>
     </div>
   </div>
-  <div id="menu" class="menu row">
-    <div class="menu__content col">
-      <a class="menu__item menu__item--logo" href="#hero"> <img src="img/logo.svg" alt=""></a>
-      <a class="menu__item menu__item--link menu__item--active" href="#hero">Inicio</a>
-      <a class="menu__item menu__item--link" href="conocenos.html">Nosotros</a>
-      <a class="menu__item menu__item--link" href="servicios.html">Servicios</a>
-      <a class="menu__item menu__item--link" href="portfolio.html">Portfolio</a>
-      <a class="menu__item menu__item--link" href="contacto.html">Contacto</a>
-      <p class="menu__item menu__item--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit illo illum quibusdam odit dicta officia, nemo excepturi</p> 
-      <div class="menu__item menu__item--icon">
-      <i class=" fab fa-facebook-f"></i>
-      <i class=" fab fa-instagram"></i>
-      <i class=" fab fa-twitter"></i>
-    </div>
-    </div>
-  </div>
-</div>
 
-<!-- end nav -->
-
-
-
+  <!-- end nav -->
 
   <!-- start hero -->
 
@@ -70,19 +68,16 @@
       <div class="hero__content col">
         <h1>Hola, Somos dweb</h1>
         <p>Impulsamos tu negocio al mundo digital</p>
-        <a href="conocenos.html" class="hero__button">Quiero saber mas <span></span></a>
-
-        <!-- <button class="hero__button" href="conocenos.html">Quiero saber mas</button> -->
-
+        <a href="conocenos.html" class="hero__button">Quiero saber más<span></span></a>
       </div>
     </div>
   </div>
 
   <!-- end hero -->
 
-   <!-- start about -->
+  <!-- start about -->
 
-   <div class="about container-fluid" id="about">
+  <div class="about container-fluid" id="about">
     <div class="row text-center text-uppercase">
       <div class="col">
         <h3>que hacemos</h3>
@@ -93,12 +88,14 @@
         <h4>Tu marca hacia el futuro digital y mas alla...</h4>
       </div>
     </div>
-    <div class="row">
-      <div class="about__content col-12 col-md-6">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eligendi ullam eos nisi quos, inventore enim ab fuga nulla praesentium in ea, esse quam harum laudantium delectus ipsum illum libero? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum culpa, nostrum quidem.</p>
+    <div class="row--content row">
+      <div class="about__content col-12 col-lg-6">
+        <p>Somos una empresa joven con experiencia, un grupo de diversos profesionales apasionados por la tecnología.
+          Nos especializamos en el desarrollo de páginas web y tiendas online enfocadas a transmitir la mejor imagen
+          para tu empresa. Sabemos como comunicar de la mejor forma posible los servicios o productos que vendes.</p>
 
       </div>
-      <div class="about__content col-12 col-md-6">
+      <div class="about__content col-12 col-lg-6">
         <img src="img/about.jpg" class="img-fluid" alt="">
       </div>
     </div>
@@ -114,21 +111,24 @@
         <div class="services__item">
           <i class="far fa-window-maximize"></i>
           <h5>Landing Page</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>Un Diseño web de landing page sirve para promocionar un producto o servicio e ingresar al
+            mundo virtual de manera económica.</p>
         </div>
       </div>
       <div class="services__content col-12 col-lg-4">
         <div class="services__item">
           <i class="far fa-window-restore"></i>
           <h5>Pagina WEB</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>Este Sitio Web está realizado con las últimas tecnologías disponibles en el mercado, es visible en todos
+            los dispositivos, rápido y sencillo.</p>
         </div>
       </div>
       <div class="services__content  col-12 col-lg-4">
         <div class="services__item services__item--nopadding">
           <i class="fas fa-store"></i>
           <h5>Tienda Online</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>Diseñamos tu tienda online manera profesional. Realizamos el sitio web
+            de e-commerce totalmente autoadministrable.</p>
         </div>
       </div>
     </div>
@@ -150,23 +150,41 @@
       </div>
     </div>
     <div class="portfolio__galery row">
-      <div class="col-12 col-sm-6 col-lg-4">
+      <div class="portfolio__item col-12 col-sm-6 col-lg-4">
         <img src="img/cafe.jpg" class="portfolio__img img-fluid" alt="">
+        <div class="portfolio__text">
+          <p>Sistema web para <span>Tienda de Cafe.</span></p> 
+        </div>
       </div>
-      <div class="col-12 col-sm-6 col-lg-4">
+      <div class="portfolio__item col-12 col-sm-6 col-lg-4">
         <img src="img/bakery.jpg" class="portfolio__img img-fluid" alt="">
+        <div class="portfolio__text">
+          <p>Landing Page para <span>La Catalana.</span></p> 
+        </div>
       </div>
-      <div class="col-12 col-sm-6 col-lg-4">
+      <div class="portfolio__item col-12 col-sm-6 col-lg-4">
         <img src="img/food.jpg" class="portfolio__img img-fluid" alt="">
+        <div class="portfolio__text">
+          <p>Sistema de gestion de pedidos para <span>Rothar BAR.</span></p> 
+        </div>
       </div>
-      <div class="col-12 col-sm-6 col-lg-4">
+      <div class="portfolio__item col-12 col-sm-6 col-lg-4">
         <img src="img/gym.jpg" class="portfolio__img img-fluid" alt="">
+        <div class="portfolio__text">
+          <p>Pagina Web con secciones para <span>Centro de entrenamientos C.A.F</span></p> 
+        </div>
       </div>
-      <div class="col-12 col-sm-6 col-lg-4">
+      <div class="portfolio__item col-12 col-sm-6 col-lg-4">
         <img src="img/shop.jpg" class="portfolio__img img-fluid" alt="">
+        <div class="portfolio__text">
+          <p>Tienda Virtual para <span>Cristobal Colon.</span></p> 
+        </div>
       </div>
-      <div class="col-12 col-sm-6 col-lg-4">
+      <div class="portfolio__item col-12 col-sm-6 col-lg-4">
         <img src="img/yoga.jpg" class="portfolio__img img-fluid" alt="">
+        <div class="portfolio__text">
+          <p>Landing Page para <span>Ariana Yoga.</span></p> 
+        </div>
       </div>
     </div>
   </div>
@@ -195,6 +213,7 @@
           <input type="email" id="email">
           <label for="email">Mensaje:</label>
           <textarea name="" id="email" cols="30" rows="10"></textarea>
+          <button class="contact__button" type="submit">Enviar</button>
         </form>
       </div>
       <div class="contact__map col col-md-6">
@@ -249,25 +268,24 @@
   <!-- Optional JavaScript -->
 
   <script>
-    
     //Function button menu SCROLL
 
     window.onscroll = function () {
-        scrollFunction()
+      scrollFunction()
     };
 
     function scrollFunction() {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            document.getElementById("menuButton").style.background = "#FFFFFF";
-            document.getElementById("menuButton").style.transition = "all 2s";
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("menuButton").style.background = "#FFFFFF";
+        document.getElementById("menuButton").style.transition = "all 2s";
 
 
-        } else {
-            document.getElementById("menuButton").style.background = "transparent";
-            document.getElementById("menuButton").style.transition = "all 2s";
+      } else {
+        document.getElementById("menuButton").style.background = "transparent";
+        document.getElementById("menuButton").style.transition = "all 2s";
 
 
-        }
+      }
     }
 
 
@@ -290,9 +308,9 @@
       }
     }
 
-    var x = window.matchMedia("(min-width: 1024px)")
-    myFunction(x) 
-    x.addListener(myFunction) 
+    var x = window.matchMedia("(min-width: 992px)")
+    myFunction(x)
+    x.addListener(myFunction)
 
 
     // Animacion burger button
