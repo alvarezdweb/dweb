@@ -9,6 +9,11 @@ $white: #FFFFFF;
 $white2: #F5F5F5;
 $black: #303030;
 
+$html:90%;
+$css:80%;
+$js:50%;
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -291,7 +296,9 @@ body {
             padding-bottom: 2em;
         }
 
-        img {}
+        img {
+            box-shadow: 10px 10px 0 0 $pinkh;
+        }
     }
 
 }
@@ -474,46 +481,103 @@ body {
 
 // -------------------------------------------------------------conocenos.html
 
-.more {
-    padding-top: 5em;
-
-    h1 {
-        font-size: 2em;
-        padding: 2em 1em;
-    }
+.know__us {
+    @extend .about;
+    padding-top: 0;
+    margin-top: 9em;
 
     &__content {
-        .col-12 {
+        margin: auto;
+
+        &__ptitle {
+            font-size: 1.3em;
+            font-weight: 500;
+            padding: 4em 0 1em 0;
+        }
+
+        &__p2 {
+            padding-bottom: 1em;
+        }
+
+        img {
+            box-shadow: 10px 10px 0 0 $pinkh;
+        }
+    }
+
+    &__skills {
+        margin: auto;
+
+        h4 {
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 3em 0 1em 0;
             margin: auto;
         }
-
-        p {
-            padding: 2em;
+       
+        &>div {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
         }
 
-        .more__skils {
-            text-align: center;
-            font-size: 4em;
-            background-color: $pink;
-            width: 80%;
-            margin: auto;
+        &__bar {
+            padding: 1em 0;
 
-            i {
-                color: $white;
-                padding: .5em;
+
+            &__logo {
+                width: 100px;
+                
+                p {
+                    font-weight: 500;
+                    margin: auto;
+                }
+
+                i {
+                    color: $black;
+                    font-size: 3em;
+                }
+            }
+
+            &__progress__bar {
+
+                padding: 0 1em;
+                background-color: transparent;
+                overflow: hidden;
+                width: 100%;
+                margin: auto;
+    
+                .bar {
+                    display: block;
+                    background: $black;
+    
+                    .progress {
+                        border-radius: 0;
+                        background: $pink;
+                        padding: .5em;
+                        width: 0;
+                    }
+            
+                    .progress--html {
+                        animation: loaderhtml 2s ease-in-out;
+                        width: $html;
+                    }
+            
+                    .progress--css {
+                        animation:  loadercss 2s ease-in-out;
+                        width: $css;
+                    }
+            
+                    .progress--js {
+                        animation:  loaderjs 2s ease-in-out;
+                        width: $js;
+                    }
+             
+                }
+       
             }
         }
-
-        .more__img {
-            text-align: center;
-
-            img {
-                border-radius: 1em;
-                width: 90%;
-            }
-
-        }
-
 
     }
 
@@ -568,8 +632,12 @@ body {
                 font-size: 1.8em;
 
             }
-        }
 
+            .hero__button {
+                font-size: 1.2em;
+            }
+
+        }
     }
 
     .about {
@@ -646,7 +714,7 @@ body {
         max-width: 992px;
 
         h3 {
-            font-size: 2em;
+            font-size: 2.1em;
         }
 
         h4 {
@@ -671,6 +739,39 @@ body {
 
 }
 
+.know__us {
+
+    &__content {
+
+        &__ptitle {
+            padding-top: 2em;
+        }
+
+        &__p1,
+        &__p2 {
+            font-size: .9em;
+        }
+
+        &__p2 {
+            padding-bottom: 1em;
+        }
+
+    }
+    &__skills {
+        padding: 2em 0;
+        h4 {
+            padding: 0 2em;
+            text-align: center;
+
+        }
+        >p {
+            padding: 1em 2em 0 2em;
+            text-align: center;
+        }
+    }
+
+}
+
 @media (min-width: 1200px) {
 
     .hero {
@@ -681,11 +782,11 @@ body {
 
         &__content {
             h1 {
-                font-size: 3.2em;
+                font-size: 3.5em;
             }
 
             p {
-                font-size: 2em;
+                font-size: 2.3em;
 
             }
         }
@@ -698,12 +799,35 @@ body {
         &__content {
             p {
                 font-size: 1.4em;
-
             }
         }
     }
 
+    .know__us {
+
+        &__content {
+            padding-top: 2em;
+            &__ptitle {
+                padding-top: 0;
+            }
+    
+            &__p1,
+            &__p2 {
+                font-size: 1em;
+                line-height: 2em;
+            }
+    
+            &__p2 {
+                padding-bottom: 0;
+            }
+    
+        }
+    
+    }
+
 }
+
+
 
 // -------------------------------------------------- end @media
 
@@ -719,6 +843,45 @@ body {
     to {
         transform: translateX(3px);
     }
+}
+
+@keyframes loaderhtml {
+
+    0% {
+        width: 0;
+
+    }
+
+    100% {
+        width: $html;
+    }
+
+}
+
+@keyframes loadercss {
+
+    0% {
+        width: 0;
+
+    }
+
+    100% {
+        width: $css;
+    }
+
+}
+
+@keyframes loaderjs {
+
+    0% {
+        width: 0;
+
+    }
+
+    100% {
+        width: $js;
+    }
+
 }
 
 // -------------------------------------------------- end @keyframes

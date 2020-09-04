@@ -186,15 +186,15 @@ body {
         -webkit-animation: bounceright .3s alternate ease infinite;
         animation: bounceright .3s alternate ease infinite; }
 
-.about, .portfolio, .contact {
+.about, .portfolio, .contact, .know__us {
   padding-top: 6em;
   max-width: 768px; }
-  .about h3, .portfolio h3, .contact h3 {
+  .about h3, .portfolio h3, .contact h3, .know__us h3 {
     color: #FF009A;
     font-weight: 700;
     font-size: 1.5em;
     padding-bottom: 1em; }
-  .about h4, .portfolio h4, .contact h4 {
+  .about h4, .portfolio h4, .contact h4, .know__us h4 {
     color: #303030;
     font-weight: 500;
     font-size: 2em;
@@ -205,6 +205,8 @@ body {
       margin: auto;
       line-height: 2em;
       padding-bottom: 2em; }
+    .about__content img {
+      box-shadow: 10px 10px 0 0 #ff0099c9; }
 
 .services {
   padding-top: 6em; }
@@ -310,29 +312,65 @@ body {
     text-align: center;
     padding: 2em; }
 
-.more {
-  padding-top: 5em; }
-  .more h1 {
-    font-size: 2em;
-    padding: 2em 1em; }
-  .more__content .col-12 {
+.know__us {
+  padding-top: 0;
+  margin-top: 9em; }
+  .know__us__content {
     margin: auto; }
-  .more__content p {
-    padding: 2em; }
-  .more__content .more__skils {
-    text-align: center;
-    font-size: 4em;
-    background-color: #FF009A;
-    width: 80%;
+    .know__us__content__ptitle {
+      font-size: 1.3em;
+      font-weight: 500;
+      padding: 4em 0 1em 0; }
+    .know__us__content__p2 {
+      padding-bottom: 1em; }
+    .know__us__content img {
+      box-shadow: 10px 10px 0 0 #ff0099c9; }
+  .know__us__skills {
     margin: auto; }
-    .more__content .more__skils i {
-      color: #FFFFFF;
-      padding: .5em; }
-  .more__content .more__img {
-    text-align: center; }
-    .more__content .more__img img {
-      border-radius: 1em;
-      width: 90%; }
+    .know__us__skills h4 {
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 3em 0 1em 0;
+      margin: auto; }
+    .know__us__skills > div {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-content: center;
+      text-align: center; }
+    .know__us__skills__bar {
+      padding: 1em 0; }
+      .know__us__skills__bar__logo {
+        width: 100px; }
+        .know__us__skills__bar__logo p {
+          font-weight: 500;
+          margin: auto; }
+        .know__us__skills__bar__logo i {
+          color: #303030;
+          font-size: 3em; }
+      .know__us__skills__bar__progress__bar {
+        padding: 0 1em;
+        background-color: transparent;
+        overflow: hidden;
+        width: 100%;
+        margin: auto; }
+        .know__us__skills__bar__progress__bar .bar {
+          display: block;
+          background: #303030; }
+          .know__us__skills__bar__progress__bar .bar .progress {
+            border-radius: 0;
+            background: #FF009A;
+            padding: .5em;
+            width: 0; }
+          .know__us__skills__bar__progress__bar .bar .progress--html {
+            animation: loaderhtml 2s ease-in-out;
+            width: 90%; }
+          .know__us__skills__bar__progress__bar .bar .progress--css {
+            animation: loadercss 2s ease-in-out;
+            width: 80%; }
+          .know__us__skills__bar__progress__bar .bar .progress--js {
+            animation: loaderjs 2s ease-in-out;
+            width: 50%; }
 
 .services--section {
   padding-top: 5em;
@@ -354,9 +392,11 @@ body {
     font-size: 3em; }
   .hero__content p {
     font-size: 1.8em; }
-  .about h3, .portfolio h3, .contact h3 {
+  .hero__content .hero__button {
+    font-size: 1.2em; }
+  .about h3, .portfolio h3, .contact h3, .know__us h3 {
     font-size: 1.8em; }
-  .about h4, .portfolio h4, .contact h4 {
+  .about h4, .portfolio h4, .contact h4, .know__us h4 {
     font-size: 2.5em; } }
 
 @media (min-width: 992px) {
@@ -388,11 +428,11 @@ body {
           display: none; }
   .hero {
     padding-top: 3em; }
-  .about, .portfolio, .contact {
+  .about, .portfolio, .contact, .know__us {
     max-width: 992px; }
-    .about h3, .portfolio h3, .contact h3 {
-      font-size: 2em; }
-    .about h4, .portfolio h4, .contact h4 {
+    .about h3, .portfolio h3, .contact h3, .know__us h3 {
+      font-size: 2.1em; }
+    .about h4, .portfolio h4, .contact h4, .know__us h4 {
       font-size: 3em; }
     .about__content p {
       padding: 2em 0;
@@ -400,20 +440,65 @@ body {
   .services__item {
     padding-bottom: 0; } }
 
+.know__us__content__ptitle {
+  padding-top: 2em; }
+
+.know__us__content__p1, .know__us__content__p2 {
+  font-size: .9em; }
+
+.know__us__content__p2 {
+  padding-bottom: 1em; }
+
+.know__us__skills {
+  padding: 2em 0; }
+  .know__us__skills h4 {
+    padding: 0 2em;
+    text-align: center; }
+  .know__us__skills > p {
+    padding: 1em 2em 0 2em;
+    text-align: center; }
+
 @media (min-width: 1200px) {
   .hero .row {
     max-width: 1000px; }
   .hero__content h1 {
-    font-size: 3.2em; }
+    font-size: 3.5em; }
   .hero__content p {
-    font-size: 2em; }
-  .about, .portfolio, .contact {
+    font-size: 2.3em; }
+  .about, .portfolio, .contact, .know__us {
     max-width: 1200px; }
     .about__content p {
-      font-size: 1.4em; } }
+      font-size: 1.4em; }
+  .know__us__content {
+    padding-top: 2em; }
+    .know__us__content__ptitle {
+      padding-top: 0; }
+    .know__us__content__p1, .know__us__content__p2 {
+      font-size: 1em;
+      line-height: 2em; }
+    .know__us__content__p2 {
+      padding-bottom: 0; } }
 
 @keyframes bounceright {
   from {
     transform: translateX(0); }
   to {
     transform: translateX(3px); } }
+
+@keyframes loaderhtml {
+  0% {
+    width: 0; }
+  100% {
+    width: 90%; } }
+
+@keyframes loadercss {
+  0% {
+    width: 0; }
+  100% {
+    width: 80%; } }
+
+@keyframes loaderjs {
+  0% {
+    width: 0; }
+  100% {
+    width: 50%; } }
