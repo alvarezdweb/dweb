@@ -32,71 +32,53 @@
 
   <!-- start nav -->
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="icon col">
-      <button onclick="openNav(estado)" class="menu-btn" id="menuButton">
-        <span class="burger-icon"></span>
-      </button>
-    </div>
-  </div>
-  <div id="menu" class="menu row">
-    <div class="menu__content col">
-      <a class="menu__item menu__item--logo" href="index.html"> <img src="img/logo.svg" alt=""></a>
-      <a class="menu__item menu__item--link" href="index.html">Inicio</a>
-      <a class="menu__item menu__item--link" href="conocenos.html">Nosotros</a>
-      <a class="menu__item menu__item--link" href="servicios.html">Servicios</a>
-      <a class="menu__item menu__item--link" href="portfolio.html">Portfolio</a>
-      <a class="menu__item menu__item--link menu__item--active" href="#">Contacto</a>
-      <p class="menu__item menu__item--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit illo illum quibusdam odit dicta officia, nemo excepturi</p> 
-      <div class="menu__item menu__item--icon">
-      <i class=" fab fa-facebook-f"></i>
-      <i class=" fab fa-instagram"></i>
-      <i class=" fab fa-twitter"></i>
-    </div>
-    </div>
-  </div>
-</div>
-
-<!-- end nav -->
-
-
-   <!-- start contact -->
-
-   <div class="contact contact--section container-fluid" id="contact">
-    <div class="row text-center text-uppercase">
-      <div class="col">
-        <h3>contacto</h3>
-      </div>
-    </div>
-    <div class="row text-center">
-      <div class="col">
-        <h4>Listo para hacer crecer tu negocio?</h4>
-      </div>
-    </div>
+  <div class="container-fluid">
     <div class="row">
-      <div class=" contact__form col-12 col-md-6">
-        <form action="#">
-          <label for="name">Tu Nombre:</label>
-          <input type="text" id="name">
-          <label for="email">Tu email:</label>
-          <input type="email" id="email">
-          <label for="email">Mensaje:</label>
-          <textarea name="" id="email" cols="30" rows="10"></textarea>
-        </form>
+      <div class="icon col">
+        <button onclick="openNav(estado)" class="menu-btn" id="menuButton">
+          <span class="burger-icon"></span>
+        </button>
       </div>
-      <div class="contact__map col col-md-6">
-        <div class="embed-responsive embed-responsive-21by9">
-          <iframe class="embed-responsive-item"
-            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13104.911758758271!2d-58.4287612!3d-34.8002068!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1595967745050!5m2!1ses!2sar"
-            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <div id="menu" class="menu row">
+      <div class="menu__content col">
+        <a class="menu__item menu__item--logo" href="index.html#hero"> <img src="img/logo.svg" alt=""></a>
+        <a class="menu__item menu__item--link" href="index.html#hero">Inicio</a>
+        <a class="menu__item menu__item--link" href="conocenos.html">Nosotros</a>
+        <a class="menu__item menu__item--link" href="servicios.html">Servicios</a>
+        <a class="menu__item menu__item--link" href="portfolio.html">Portfolio</a>
+        <a class="menu__item menu__item--link menu__item--active" href="contacto.html">Contacto</a>
+        <p class="menu__item menu__item--p">Para nosotros desarrollar no es solo entregar y cumplir con los tiempos, es
+          llevar tu idea a un siguiente nivel</p>
+        <div class="menu__item menu__item--icon">
+          <a href="#"> <i class=" fab fa-facebook-f"></i> </a>
+          <a href="#"> <i class=" fab fa-instagram"></i> </a>
+          <a href="#"> <i class=" fab fa-twitter"></i> </a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- end contact -->
+  <!-- end nav -->
 
+  <!-- start knowus -->
+  <div class="know__us container-fluid">
+    <div class="row text-center text-uppercase">
+      <div class="col">
+        <h3>Contacto</h3>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col">
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas excepturi praesentium</h4>
+      </div>
+    </div>
+
+  
+
+  </div>
+
+  <!-- end knowus -->
 
   <!-- start footer -->
 
@@ -113,50 +95,42 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
   <!-- Optional JavaScript -->
 
+
   <script>
-    
+  
+
+
+
     //Function button menu SCROLL
 
     window.onscroll = function () {
-        scrollFunction()
+      scrollFunction()
     };
 
     function scrollFunction() {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            document.getElementById("menuButton").style.background = "#FFFFFF";
-            document.getElementById("menuButton").style.transition = "all 2s";
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("menuButton").style.background = "#FFFFFF";
+        document.getElementById("menuButton").style.transition = "all 2s";
 
+      } else {
+        document.getElementById("menuButton").style.background = "transparent";
+        document.getElementById("menuButton").style.transition = "all 2s";
 
-        } else {
-            document.getElementById("menuButton").style.background = "transparent";
-            document.getElementById("menuButton").style.transition = "all 2s";
+      }
+      // if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      //   $(".progressHtml").addClass("progress--html");
+      //   $(".progressCss").addClass("progress--css");
+      //   $(".progressJs").addClass("progress--js");
 
+      // } else {
+      //   $(".progressHtml").removeClass("progress--html");
+      //   $(".progressCss").removeClass("progress--css");
+      //   $(".progressJs").removeClass("progress--js");
 
-        }
+      // }
     }
 
 
@@ -166,20 +140,22 @@
       if (x.matches) {
         document.getElementById("menu").style.transform = "translateX(0)";
         document.getElementById("menuButton").style.display = "none";
+        document.getElementById("menu").style.boxShadow = "0px 0px 30px rgba(127, 137, 161, 0.5)";
         document.getElementById("menu").style.transition = "transform 0s";
 
       } else {
         document.getElementById("menu").style.transform = "translateX(-250px)";
         document.getElementById("menuButton").style.display = "inline-block";
+        document.getElementById("menu").style.boxShadow = "none";
         document.getElementById("menu").style.transition = "transform 0s";
 
 
       }
     }
 
-    var x = window.matchMedia("(min-width: 1024px)")
-    myFunction(x) 
-    x.addListener(myFunction) 
+    var x = window.matchMedia("(min-width: 992px)")
+    myFunction(x)
+    x.addListener(myFunction)
 
 
     // Animacion burger button
@@ -209,6 +185,8 @@
         window.estado--;
       }
     }
+
+
   </script>
 
 
