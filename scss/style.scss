@@ -585,20 +585,127 @@ body {
 
 // ---------------------------------------------------------------------services.html
 
-.services--section {
-    padding-top: 5em;
-    margin: auto;
+.our__services {
+    @extend .about;
+    padding-top: 0;
+    margin-top: 9em;
 
-    .row {
-        background-color: $white;
-        margin: auto;
+    &__plan {
+        background-color: $pink;
+        margin: 1em auto;
+        max-width: 410px;
 
+        h4 {
+            text-align: center;
+            padding: 1em 0;
+            color: $white;
+            font-weight: 300;
 
-        .services__item {
+            span {
+                font-weight: 700;
+            }
+        }
 
-            color: $black;
+        >span {
+            margin: auto;
+            display: block;
+            width: 20%;
+            border-top: 2px solid;
+            color: $white;
+        }
+
+        &__price {
+            font-size: 5em;
+            font-weight: 900;
+            color: $white;
+            text-align: center;
+
+            span {
+                vertical-align: middle;
+                font-size: .5em;
+                padding-right: .1em;
+            } 
+        } 
+
+        &__desc {
+            color: $white;
+            text-align: center;
+            padding: 2em 0;
+        }
+
+        &__item {
+            margin: auto;
+            color: $white;
+            width: 80%;
+            padding: .5em 0;
+
+            span {
+                padding-right: .1em;
+            }
+
+            &--first {
+                padding-top: 2em;
+            }
+
+            &--latest {
+                padding-bottom: 2em;
+            }
+        }
+
+        &__button {
+                display: block;
+                width: 70%;
+                text-align: center;
+                margin: 2em auto;
+                padding: .5em;
+                border: 2px solid;
+                color: $white;
+                transition: all .2s ease-in-out;
+                font-weight: 700;
+
+                &:hover {
+                    color: $pink;
+                    background-color: $white;
+                    text-decoration: none;
+
+                }
+
+            
+           
         }
     }
+
+    &__content {
+        margin: auto;
+
+        &__ptitle {
+            font-size: 1.3em;
+            font-weight: 500;
+            padding: 4em 0 1em 0;
+        }
+
+        &__p1 {
+            font-weight: 500;
+            font-size: 1.5em;
+
+            span {
+                margin: auto;
+                color: $pink;
+                
+            }
+     
+        }
+
+        &__p2 {
+            padding-bottom: 1em;
+        }
+
+        img {
+            box-shadow: 10px 10px 0 0 $pinkh;
+        }
+    }
+
+
 
 }
 
@@ -736,41 +843,62 @@ body {
         }
     }
 
+    .know__us {
+
+        &__content {
+    
+            &__ptitle {
+                padding-top: 2em;
+            }
+    
+            &__p1,
+            &__p2 {
+                font-size: .9em;
+            }
+    
+            &__p2 {
+                padding-bottom: 1em;
+            }
+    
+        }
+        &__skills {
+            padding: 2em 0;
+            h4 {
+                padding: 0 2em;
+                text-align: center;
+    
+            }
+            >p {
+                padding: 1em 2em 0 2em;
+                text-align: center;
+            }
+        }
+    
+    }
+    
+    
+    .our__services {
+
+        &__plan {
+
+            min-width: 300px;     
+            
+            h4 {
+                font-size: 2em;
+            }
+
+            &__price {
+                font-size: 3.5em;
+            }
+        
+        }
+
+
+    }
 
 }
 
-.know__us {
 
-    &__content {
-
-        &__ptitle {
-            padding-top: 2em;
-        }
-
-        &__p1,
-        &__p2 {
-            font-size: .9em;
-        }
-
-        &__p2 {
-            padding-bottom: 1em;
-        }
-
-    }
-    &__skills {
-        padding: 2em 0;
-        h4 {
-            padding: 0 2em;
-            text-align: center;
-
-        }
-        >p {
-            padding: 1em 2em 0 2em;
-            text-align: center;
-        }
-    }
-
-}
 
 @media (min-width: 1200px) {
 
