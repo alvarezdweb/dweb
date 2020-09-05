@@ -590,10 +590,17 @@ body {
     padding-top: 0;
     margin-top: 9em;
 
+    h4 {
+        padding-bottom: 4em;
+    }
+
+
     &__plan {
         background-color: $pink;
         margin: 1em auto;
         max-width: 410px;
+        
+
 
         h4 {
             text-align: center;
@@ -878,6 +885,9 @@ body {
     
     
     .our__services {
+        h4 {
+            padding-bottom: 2em;
+        }
 
         &__plan {
 
