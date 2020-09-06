@@ -186,15 +186,15 @@ body {
         -webkit-animation: bounceright .3s alternate ease infinite;
         animation: bounceright .3s alternate ease infinite; }
 
-.about, .portfolio, .contact, .know__us, .our__services {
+.about, .portfolio, .contact, .know__us, .our__services, .our__portfolio {
   padding-top: 6em;
   max-width: 768px; }
-  .about h3, .portfolio h3, .contact h3, .know__us h3, .our__services h3 {
+  .about h3, .portfolio h3, .contact h3, .know__us h3, .our__services h3, .our__portfolio h3 {
     color: #FF009A;
     font-weight: 700;
     font-size: 1.5em;
     padding-bottom: 1em; }
-  .about h4, .portfolio h4, .contact h4, .know__us h4, .our__services h4 {
+  .about h4, .portfolio h4, .contact h4, .know__us h4, .our__services h4, .our__portfolio h4 {
     color: #303030;
     font-weight: 500;
     font-size: 2em;
@@ -268,6 +268,36 @@ body {
           font-weight: 700; }
     .portfolio__galery .portfolio__item:hover .portfolio__text {
       opacity: .9; }
+    .portfolio__galery .portfolio__item .portfolio__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #FF009A;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #FFFFFF; }
+      .portfolio__galery .portfolio__item .portfolio__button__text span {
+        font-weight: 700; }
+      .portfolio__galery .portfolio__item .portfolio__button__underline {
+        margin: auto;
+        display: block;
+        width: 20%;
+        border-top: 2px solid;
+        color: #FFFFFF;
+        position: absolute;
+        top: 59%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: width .3s ease-in-out; }
+      .portfolio__galery .portfolio__item .portfolio__button:hover .portfolio__button__underline {
+        width: 40%; }
+      .portfolio__galery .portfolio__item .portfolio__button:hover {
+        text-decoration: none; }
 
 .contact__form {
   margin: auto; }
@@ -381,12 +411,13 @@ body {
     background-color: #FF009A;
     margin: 1em auto;
     max-width: 410px; }
-    .our__services__plan h4 {
+    .our__services__plan h5 {
+      font-size: 2em;
       text-align: center;
       padding: 1em 0;
       color: #FFFFFF;
       font-weight: 300; }
-      .our__services__plan h4 span {
+      .our__services__plan h5 span {
         font-weight: 700; }
     .our__services__plan > span {
       margin: auto;
@@ -449,8 +480,23 @@ body {
     .our__services__content img {
       box-shadow: 10px 10px 0 0 #ff0099c9; }
 
-.portfolio--section {
-  padding: 10em 1em; }
+.our__portfolio {
+  padding-top: 0;
+  margin-top: 9em; }
+  .our__portfolio h4 {
+    padding-bottom: 2em; }
+  .our__portfolio__brand h5 {
+    font-size: 1.5em;
+    padding: 2em 0;
+    text-align: center; }
+  .our__portfolio .carousel {
+    background-color: #FFFFFF;
+    margin: auto;
+    padding: 3em 0; }
+    .our__portfolio .carousel-indicators li {
+      border-radius: 1em;
+      border: 3px solid grey;
+      width: 3px; }
 
 .contact--section {
   padding: 10em 1em; }
@@ -462,9 +508,9 @@ body {
     font-size: 1.8em; }
   .hero__content .hero__button {
     font-size: 1.2em; }
-  .about h3, .portfolio h3, .contact h3, .know__us h3, .our__services h3 {
+  .about h3, .portfolio h3, .contact h3, .know__us h3, .our__services h3, .our__portfolio h3 {
     font-size: 1.8em; }
-  .about h4, .portfolio h4, .contact h4, .know__us h4, .our__services h4 {
+  .about h4, .portfolio h4, .contact h4, .know__us h4, .our__services h4, .our__portfolio h4 {
     font-size: 2.5em; } }
 
 @media (min-width: 992px) {
@@ -496,11 +542,11 @@ body {
           display: none; }
   .hero {
     padding-top: 3em; }
-  .about, .portfolio, .contact, .know__us, .our__services {
+  .about, .portfolio, .contact, .know__us, .our__services, .our__portfolio {
     max-width: 992px; }
-    .about h3, .portfolio h3, .contact h3, .know__us h3, .our__services h3 {
+    .about h3, .portfolio h3, .contact h3, .know__us h3, .our__services h3, .our__portfolio h3 {
       font-size: 2.1em; }
-    .about h4, .portfolio h4, .contact h4, .know__us h4, .our__services h4 {
+    .about h4, .portfolio h4, .contact h4, .know__us h4, .our__services h4, .our__portfolio h4 {
       font-size: 3em; }
     .about__content p {
       padding: 2em 0;
@@ -525,10 +571,12 @@ body {
     padding-bottom: 2em; }
   .our__services__plan {
     min-width: 300px; }
-    .our__services__plan h4 {
-      font-size: 2em; }
     .our__services__plan__price {
-      font-size: 3.5em; } }
+      font-size: 3.5em; }
+  .our__portfolio__brand h5 {
+    font-size: 2em; }
+  .our__portfolio .carousel img {
+    padding: 1em; } }
 
 @media (min-width: 1200px) {
   .hero .row {
@@ -537,7 +585,7 @@ body {
     font-size: 3.5em; }
   .hero__content p {
     font-size: 2.3em; }
-  .about, .portfolio, .contact, .know__us, .our__services {
+  .about, .portfolio, .contact, .know__us, .our__services, .our__portfolio {
     max-width: 1200px; }
     .about__content p {
       font-size: 1.4em; }
