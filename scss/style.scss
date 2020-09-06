@@ -531,6 +531,8 @@ body {
     @extend .about;
     padding-top: 0;
     margin-top: 9em;
+    padding-bottom: 4em;
+
 
     &__content {
         margin: auto;
@@ -635,6 +637,8 @@ body {
     @extend .about;
     padding-top: 0;
     margin-top: 9em;
+    padding-bottom: 4em;
+
 
     h4 {
         padding-bottom: 4em;
@@ -769,9 +773,15 @@ body {
     @extend .about;
     padding-top: 0;
     margin-top: 9em;
+    padding-bottom: 4em;
+
 
     h4 {
-        padding-bottom: 2em;
+        padding-bottom: 4em;
+    }
+
+    .portfolio__item--dnone {
+        display: none;
     }
 
     &__brand {
@@ -808,13 +818,103 @@ body {
 
 // ---------------------------------------------------------------------contacto.html
 
-.contact--section {
-    padding: 10em 1em;
+.contact__us {
+
+    @extend .about;
+    padding-top: 0;
+    margin-top: 9em;
+    padding-bottom: 4em;
+
+
+    h4 {
+        padding-bottom: 4em;
+    }
+
+    .contact__map {
+        padding-top: 3em;
+        text-align: center;
+        
+        p {
+            span {
+                vertical-align: middle;
+                padding-right: .2em;
+                color: $pink;
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    .contact__info {
+        margin: auto;
+        padding-top: 4em;
+
+        &__container {
+            margin: auto;
+            max-width: 420px;
+            background-color: $pink;
+
+            h5 {
+                color: $white;
+                font-weight: 300;
+                text-align: center;
+                padding: 3em 0 1.5em 0;
+
+                span {
+                    font-weight: 700;
+                }
+
+                
+            }
+
+            .contact__info__title {
+                padding: 2em 0 .5em 0;
+                font-weight: 500;
+                text-align: left;
+                width: 50%;
+                margin: auto;
+            }
+
+            p{
+                color: $white;
+                width: 50%;
+                margin: auto;
+                padding: .5em 0;
+            }   
+            .contact__info--lastitem {
+                padding-bottom: 3em;
+            } 
+
+            >span {
+                margin: auto;
+                display: block;
+                width: 20%;
+                border-top: 2px solid;
+                color: $white;
+            }
+
+            .contact__info__link {
+                text-align: center;
+                padding: 2em 0 3em 0;
+                a {
+                    color: $white;
+                    font-size: 2em;
+                    padding: .5em;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    &:hover i {
+                        transition: all .3s ease-in-out;
+                        transform: scale(1.2,1.2);
+                    }
+                }
+            }
+    
+        }
+    }
 }
 
 // -------------------------------------------------- start @media
-
-@media (min-width: 576px) {}
 
 @media (min-width: 768px) {
 
@@ -848,7 +948,6 @@ body {
             font-size: 2.5em;
         }
     }
-
 
 }
 
@@ -989,6 +1088,13 @@ body {
 
     .our__portfolio {
 
+        h4 {
+            padding-bottom: 2em;
+        }
+        .portfolio__item--dnone {
+            display: block;
+        }
+
         &__brand {
 
             h5 {
@@ -1003,6 +1109,30 @@ body {
                 padding: 1em;
             }
         
+        }
+    }
+
+    
+    .contact__us {
+   
+        h4 {
+            padding-bottom: 2em;
+        }
+        .contact__form {
+            textarea {
+                height: 180px;
+            }
+
+        }
+        .contact__map {
+           padding-top: 0;
+          
+        }
+    
+        .contact__info {
+            margin: 0 auto;
+            padding: 0;
+
         }
     }
 
