@@ -394,13 +394,13 @@ body {
             padding: .5em;
             width: 0; }
           .know__us__skills__bar__progress__bar .bar .progress--html {
-            animation: loaderhtml 2s ease-in-out;
+            animation: loaderhtml 4s ease-in-out;
             width: 90%; }
           .know__us__skills__bar__progress__bar .bar .progress--css {
-            animation: loadercss 2s ease-in-out;
+            animation: loadercss 4s ease-in-out;
             width: 80%; }
           .know__us__skills__bar__progress__bar .bar .progress--js {
-            animation: loaderjs 2s ease-in-out;
+            animation: loaderjs 4s ease-in-out;
             width: 50%; }
 
 .our__services {
@@ -522,24 +522,24 @@ body {
     padding-top: 4em; }
     .contact__us .contact__info__container {
       margin: auto;
-      max-width: 420px;
+      max-width: 410px;
       background-color: #FF009A; }
       .contact__us .contact__info__container h5 {
-        color: #FFFFFF;
-        font-weight: 300;
         text-align: center;
-        padding: 3em 0 1.5em 0; }
+        padding: 3em 0 1.5em 0;
+        color: #FFFFFF;
+        font-weight: 300; }
         .contact__us .contact__info__container h5 span {
           font-weight: 700; }
       .contact__us .contact__info__container .contact__info__title {
         padding: 2em 0 .5em 0;
         font-weight: 500;
         text-align: left;
-        width: 50%;
+        width: 80%;
         margin: auto; }
       .contact__us .contact__info__container p {
         color: #FFFFFF;
-        width: 50%;
+        width: 80%;
         margin: auto;
         padding: .5em 0; }
       .contact__us .contact__info__container .contact__info--lastitem {
@@ -573,7 +573,11 @@ body {
   .about h3, .portfolio h3, .contact h3, .know__us h3, .our__services h3, .our__portfolio h3, .contact__us h3 {
     font-size: 1.8em; }
   .about h4, .portfolio h4, .contact h4, .know__us h4, .our__services h4, .our__portfolio h4, .contact__us h4 {
-    font-size: 2.5em; } }
+    font-size: 2.5em; }
+  .contact__us .contact__info .contact__info__title {
+    width: 60%; }
+  .contact__us .contact__info p {
+    width: 60%; } }
 
 @media (min-width: 992px) {
   .icon {
@@ -646,9 +650,9 @@ body {
   .contact__us h4 {
     padding-bottom: 2em; }
   .contact__us .contact__form textarea {
-    height: 180px; }
+    height: 150px; }
   .contact__us .contact__map {
-    padding-top: 0; }
+    padding-top: 2em; }
   .contact__us .contact__info {
     margin: 0 auto;
     padding: 0; } }
